@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+          <h2>Hangman</h2>
+          <h3>{{message}}</h3>
+          <p>
+            You <span>{{result}}</span>
+          </p>
+          <p>The word was {{word}}!</p>
+      </header>
+        <div class="choice">
+            <form action="/" method="POST">
+              <button type="submit">PLAY AGAIN!!!</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

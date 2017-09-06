@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+          <h3>Hangman</h3>
+          <h3>You have {{guesses}} guesses left</h3>
+      </header>
+      <main>
+        <div class="display">
+          {{#display}}
+            {{.}}
+          {{/display}}
+        </div>
+        <div class="guess">
+          <form action='/' method='post'>
+            <p></p>
+            <input maxlength="1" type="text" name="guess" value="" placeholder="Enter 1 Letter Here" required autofocus>
+            <button type="submit" name="button">Make a guess</button>
+          </form>
+        </div>
+        <div class="letters">
+          <h1>Letters Guessed</h1>
+          {{#letter}}
+            {{.}}
+          {{/letter}}
+        </div>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
